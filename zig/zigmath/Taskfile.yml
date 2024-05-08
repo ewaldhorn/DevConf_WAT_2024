@@ -1,0 +1,18 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    desc: Lists all available tasks
+    cmds:
+      - task --list-all
+    silent: true
+  build:
+    desc: Builds the Zig wasm module
+    cmds:
+      - zig build-exe zigmath.zig -target wasm32-freestanding -fno-entry --export=product
+    silent: true

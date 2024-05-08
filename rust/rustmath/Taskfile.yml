@@ -1,0 +1,28 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    desc: Lists available tasks
+    cmds:
+      - task --list-all
+    silent: true
+  build:
+    desc: Builds the Wasm32 Rust module in debug mode
+    cmds:
+      - cargo build --target wasm32-unknown-unknown
+    silent: true
+  release:
+    desc: Builds the Wasm32 Rust module in release mode
+    cmds:
+      - cargo build --target wasm32-unknown-unknown --release
+    silent: true
+  test:
+    desc: Runs tests
+    cmds:
+      - cargo test
+    silent: true

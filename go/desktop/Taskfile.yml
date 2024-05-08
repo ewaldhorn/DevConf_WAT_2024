@@ -1,0 +1,34 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  RUST_WASM_DIR: ../../rust/rustmath/target/wasm32-unknown-unknown/release
+  RUST_WASM_FILE: rustmath.wasm
+  TINY_GO_DIR: ../tinygo
+  TINY_GO_FILE: tinygomath.wasm
+
+tasks:
+  default:
+    desc: Lists all available tasks
+    cmds:
+      - task --list-all
+    silent: true
+  refresh:
+    desc: Copies the wasm module dependencies to the 'wasm' folder
+    cmds:
+      - "cp {{.RUST_WASM_DIR}}/{{.RUST_WASM_FILE}} ./wasm/"
+      - "cp {{.TINY_GO_DIR}}/{{.TINY_GO_FILE}} ./wasm/"
+    silent: false
+  run:
+    desc: Runs the Go desktop app
+    cmds:
+      - task refresh
+      - go run .
+    silent: false
+  build:
+    desc: Builds a native executable
+    cmds:
+      - task refresh
+      - go build -o runme -ldflags="-s -w"
+    silent: false

@@ -1,0 +1,10 @@
+rust/rustmath/target
+go/desktop/wasm
+go/desktop/runme
+go/tinygo/tinygomath.wasm
+.DS_Store
+zig/zigmath/zigmath.wasm
+zig/zigmath/zigmath.wasm.o
+c/simplemath/square.wasm
+c/smallest/smallest.wasm
+go/desktop/vendor

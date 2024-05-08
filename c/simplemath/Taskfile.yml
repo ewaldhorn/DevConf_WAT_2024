@@ -1,0 +1,15 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  default:
+    desc: Lists all available tasks
+    cmds:
+      - task --list-all
+    silent: true
+  build:
+    desc: Builds the C wasm module
+    cmds:
+      - clang --target=wasm32 --no-standard-libraries -Wl,--export-all -Wl,--no-entry -o square.wasm square.c
+    silent: true

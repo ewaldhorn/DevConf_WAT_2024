@@ -1,0 +1,13 @@
+[package]
+name = "rustmath"
+version = "0.1.0"
+authors = ["Ewald Horn <ewald@nofuss.co.za>"]
+description = "A simple Wasm module in Rust"
+license = "MIT"
+repository = "https://gitlab.com/ewaldhorn/devconf2024"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]

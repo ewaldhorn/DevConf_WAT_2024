@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+}
+
+/* Header */
+#header {
+    width: 900px;
+    max-width: 900px;
+    min-width: 900px;
+    margin: auto;
+    background-color: rgb(20, 20, 20);
+    color: #909090;
+}
+
+#header h1 {
+    color: whitesmoke;
+}
+
+#header a {
+    color: #909090;
+}
+
+#header #attribution {
+    width: 900px;
+    text-align: center;
+    font-size: smaller;
+}
+
+/* Content */
+#content {
+    width: 900px;
+    max-width: 900px;
+    min-width: 900px;
+    margin: auto;
+    background-color: rgb(20, 20, 20);
+    color: #909090;
+}
+
+#content h2 {
+    color: whitesmoke;
+}
+
+#content a {
+    color: #909090;
+}
+
+#content hr {
+    border: 1px solid rgba(255, 166, 0, 0.092);
+}
+
+#content #attribution {
+    width: 900px;
+    text-align: center;
+    font-size: smaller;
+}
+
+/* Status */
+#status {
+    width: 900px;
+    margin: auto;
+}
+
+#status p {
+    color: gray;
+    width: 900px;
+    text-align: center;
+    font-size: small;
+}
+
+/* Footer */
+#footer {
+    font-size: x-small;
+    color: rgba(255, 166, 0, 0.475);
+}
+
+#footer a {
+    color: rgba(255, 166, 0, 0.475);
+}
+
+#footer :visited {
+    color: rgba(255, 166, 0, 0.475);
+}
+
+.audio_player {
+    height: 20px;
+}
